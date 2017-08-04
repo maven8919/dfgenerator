@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
-class DfgeneratorApplication
+class DfGeneratorApplication
 
-fun main(args: Array<String>) {
-    SpringApplication.run(DfgeneratorApplication::class.java, *args)
+fun main(args: Array<String>)  {
+    SpringApplication.run(DfGeneratorApplication::class.java, *args)
 }
