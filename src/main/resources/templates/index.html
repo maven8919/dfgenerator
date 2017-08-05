@@ -63,8 +63,19 @@
 </nav>
 
 <div id="df_site_logo">
-    <img src="/df_site_logos/draftkings_logo.jpg" th:src="@{/df_site_logos/draftkings_logo.jpg}" class="img-fluid" alt="Responsive image" />
+    <img id="dk_img" src="/df_site_logos/draftkings_logo.jpg" th:src="@{/df_site_logos/draftkings_logo.jpg}" class="img-fluid" alt="Draftking logo" />
+    <div id="dk_sports">
+        <img id="baseball" src="/sport_logos/baseball.png" th:src="@{/sport_logos/baseball.png}" class="img-fluid" alt="Baseball logo" />
+    </div>
 </div>
 
+
+<script>
+$(document).ready(function(){
+    $("#dk_img").click(function(){
+        $("#dk_sports").slideToggle(1000);
+    });
+});
+</script>
 </body>
 </html>
