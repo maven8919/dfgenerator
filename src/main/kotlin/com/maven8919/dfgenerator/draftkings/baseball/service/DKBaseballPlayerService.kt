@@ -20,13 +20,19 @@ class DKBaseballPlayerService {
 
     private fun transformLineToBaseballPlayer(line: String?): DKBaseballPlayer {
         val fields: List<String>? = line?.split(",")
-        fields?.forEach { print(it) }
-        return DKBaseballPlayer(fields?.get(0) as String,
+        return DKBaseballPlayer(parsePositions(fields?.get(0)),
                 fields?.get(1) as String,
                 fields?.get(2).toInt(),
                 fields?.get(3) as String,
                 fields?.get(4).toDouble(),
                 fields?.get(5) as String)
+    }
+
+    private fun parsePositions(allPositions: String?): List<String> {
+        val result = ArrayList<String>()
+        val positions = allPositions?.split("/")
+        positions?.forEach{result.add(it)}
+        return result
     }
 
     fun generateStarters(DKBaseballPlayers: List<DKBaseballPlayer>) : List<DKBaseballPlayer> {
